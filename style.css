@@ -1,135 +1,133 @@
+/* General Body Styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f9f9; /* Soft light background */
-    color: #333;
-    transition: background-color 0.3s ease;
-}
-
-header {
-    background-color: #4CAF50;
+    background-color: #132f5c; /* Dark background */
     color: white;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    font-weight: bold;
-    letter-spacing: 2px;
+/* Header Section */
+header {
+    text-align: center;
+    margin: 20px 0;
 }
 
 .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
-    border: 5px solid #fff; /* Add border around the picture */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
 }
 
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Navigation Menu */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center the items */
+    gap: 10px; /* Reduce spacing between items */
 }
 
 nav ul li {
-    display: inline;
+    display: flex;
+    justify-content: center;
 }
 
-nav a {
+nav ul li a {
     text-decoration: none;
-    color: #4CAF50;
-    font-weight: bold;
-    padding: 12px 18px;
-    border-radius: 8px;
-    background-color: white;
-    border: 2px solid #4CAF50;
-    transition: all 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #66BB6A;
     color: white;
-    transform: translateY(-5px); /* Lift the button on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    font-weight: bold;
+    padding: 10px 20px; /* Slightly larger padding */
+    border: 2px solid white; /* White border for contrast */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: transparent; /* No background */
+    white-space: nowrap; /* Prevent text from breaking */
 }
 
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent hover effect */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Sections */
 main {
-    max-width: 900px;
-    margin: 30px auto;
+    max-width: 98%; /* Take up 90% of the screen width */
+    width: 95%; /* Limit the maximum width for readability */
+    margin: 20px auto;
     padding: 20px;
+    background-color: white; /* Keep the white background */
+    color: #333; /* Text color for better readability */
     border-radius: 10px;
-    background-color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+section {
+    margin-bottom: 40px;
+}
+
 h2 {
-    color: #4CAF50;
     font-size: 2em;
+    color: #132f5c; /* Section title color */
     margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: fadeIn 1s ease-out;
+    border-bottom: 2px solid rgba(19, 47, 92, 0.2); /* Subtle underline effect */
+    padding-bottom: 5px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+p, li {
+    font-size: 1.1em;
 }
 
-li {
-    margin: 20px 0;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-li:hover {
-    background-color: #f1f1f1;
-    transform: scale(1.05);
+/* Project Links */
+.link-description {
+    font-style: italic;
+    color: #666;
 }
 
 a {
     text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
+    color: #007BFF; /* Bright contrasting link color */
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ff6f61; /* Fun color change */
+    color: #0056b3; /* Slightly darker hover color */
     text-decoration: underline;
 }
 
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 10px 0;
-}
-
-.link-description {
-    font-style: italic;
-    color: #555;
-}
-
+/* Footer Section */
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #132f5c; /* Same color as the header */
+    padding: 20px;
     margin-top: 30px;
-    font-size: 0.9em;
+    color: white; /* Default white text */
+}
+
+footer h2 {
+    color: white; /* Ensure "Contact Info" is white */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer address {
+    font-style: normal;
+    color: white; /* White text for address content */
+    margin: 0;
 }
 
 footer a {
@@ -139,16 +137,22 @@ footer a {
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subtle hover effect */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 5px; /* Reduce spacing further on smaller screens */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    nav ul li a {
+        font-size: 0.9em; /* Reduce font size for smaller screens */
+        padding: 8px 12px; /* Smaller padding */
+    }
+
+    main {
+        max-width: 95%; /* Expand main content slightly on smaller screens */
+        padding: 15px; /* Reduce padding for better fit */
     }
 }
